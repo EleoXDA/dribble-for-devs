@@ -30,7 +30,7 @@ export const authOptions: NextAuthOptions = {
   },
   theme: {
     colorScheme: "light",
-    logo: "/logo.png",
+    logo: "../public/logo.svg",
   },
   callbacks: {
     async session({session}) {
