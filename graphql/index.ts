@@ -14,8 +14,8 @@ export const getUserQuery =  `
 `
 
 export const createUserMutation = `
-  mutation CreateUser($input: CreateUserInput!) {
-    userCreate(data: {input: $input}) {
+  mutation CreateUser($input: UserCreateInput!) {
+    userCreate(input: $input) {
       user {
         id
         name
