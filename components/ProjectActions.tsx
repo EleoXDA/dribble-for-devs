@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { deleteProject, fetchToken } from '@/lib/actions';
+import { deleteProject, fetchToken } from '../lib/actions';
 
 type Props = {
   projectId: string;
