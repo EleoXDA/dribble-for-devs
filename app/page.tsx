@@ -1,8 +1,8 @@
-import { ProjectInterface } from "@/common.types";
+import { ProjectInterface } from "../common.types";
 import Categories from "../components/Categories";
 import LoadMore from "../components/LoadMore";
 import ProjectCard from "../components/ProjectCard";
-import { fetchAllProjects } from "@/lib/actions";
+import { fetchAllProjects } from "../lib/actions";
 
 type SearchParams = {
   category?: string | "";
