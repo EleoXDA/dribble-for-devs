@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 
-import Modal from "@/components/Modal";
-import ProjectForm from "@/components/ProjectForm";
-import { getCurrentUser } from "@/lib/session";
-import { getProjectDetails } from "@/lib/actions";
-import { ProjectInterface } from "@/common.types";
+import Modal from "../../../components/Modal";
+import ProjectForm from "../../../components/ProjectForm";
+import { getCurrentUser } from "../../../lib/session";
+import { getProjectDetails } from "../../../lib/actions";
+import { ProjectInterface } from "../../../common.types";
 
 const EditProject = async ({ params: { id } }: { params: { id: string } }) => {
   const session = await getCurrentUser();
