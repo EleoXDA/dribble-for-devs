@@ -13,8 +13,11 @@ const client = new GraphQLClient(apiUrl);
 export const fetchToken = async () => {
   try {
     const response = await fetch(`${serverUrl}/api/auth/token`);
+    console.log(response);
+    console.log(response.json);
     return response.json();
   } catch (err) {
+    console.log(err);
     throw err;
   }
 };
@@ -29,14 +32,18 @@ export const uploadImage = async (imagePath: string) => {
     });
     return response.json();
   } catch (err) {
+    console.log(err);
     throw err;
   }
 };
 
 const makeGraphQLRequest = async (query: string, variables = {}) => {
   try {
+    console.log(query);
+    console.log(await client.request(query, variables));
     return await client.request(query, variables);
   } catch (err) {
+    console.log(err);
     throw err;
   }
 };
@@ -53,6 +60,7 @@ export const createNewProject = async (form: ProjectForm, creatorId: string, tok
   if (imageUrl.url) {
     client.setHeader("Authorization", `Bearer ${token}`);
 
+    console.log(client.setHeader("Authorization", `Bearer ${token}`));
     const variables = {
       input: { 
         ...form, 
@@ -62,7 +70,6 @@ export const createNewProject = async (form: ProjectForm, creatorId: string, tok
         }
       }
     };
-
     return makeGraphQLRequest(createProjectMutation, variables);
   }
 };
@@ -84,7 +91,7 @@ export const updateProject = async (form: ProjectForm, projectId: string, token:
       updatedForm = { ...updatedForm, image: imageUrl.url };
     }
   }
-
+  console.log(client.setHeader("Authorization", `Bearer ${token}`));
   client.setHeader("Authorization", `Bearer ${token}`);
 
   const variables = {

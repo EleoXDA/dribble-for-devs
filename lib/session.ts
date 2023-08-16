@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
         },
         secret
       );
-
+      console.log(encodedToken);
       return encodedToken;
     },
     decode: async ({ secret, token }) => {

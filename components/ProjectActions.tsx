@@ -19,6 +19,7 @@ const ProjectActions = ({ projectId }: Props) => {
     setIsDeleting(true);
 
     const { token } = await fetchToken();
+    console.log(token);
 
     try {
       await deleteProject(projectId, token);

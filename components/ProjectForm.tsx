@@ -64,7 +64,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
         setSubmitting(true)
 
         const { token } = await fetchToken()
-
+        console.log('Form Submit Token:', token)
         try {
             if (type === "create") {
                 await createNewProject(form, session?.user?.id, token)
