@@ -19,14 +19,12 @@ const ProjectActions = ({ projectId }: Props) => {
     setIsDeleting(true);
 
     const { token } = await fetchToken();
-    console.log(token);
 
     try {
       await deleteProject(projectId, token);
 
       router.push('/');
     } catch (error) {
-      console.error(error);
     } finally {
       setIsDeleting(false);
     }

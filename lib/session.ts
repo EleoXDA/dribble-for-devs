@@ -24,12 +24,10 @@ export const authOptions: NextAuthOptions = {
         },
         secret
       );
-      console.log(encodedToken);
       return encodedToken;
     },
     decode: async ({ secret, token }) => {
       const decodedToken = jsonwebtoken.verify(token!, secret);
-      console.log(decodedToken);
       return decodedToken as JWT;
     },
   },
@@ -53,7 +51,6 @@ export const authOptions: NextAuthOptions = {
 
         return newSession;
       } catch (error: any) {
-        console.error('Error retrieving user data: ', error.message);
         return session;
       }
     },
@@ -73,7 +70,6 @@ export const authOptions: NextAuthOptions = {
 
         return true;
       } catch (error: any) {
-        console.log('Error checking if user exists: ', error.message);
         return false;
       }
     },
