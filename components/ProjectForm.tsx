@@ -79,7 +79,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
             }
 
         } catch (error) {
-            alert(`Failed to ${type === "create" ? "create" : "edit"} a project. Try again!`);
+            alert(`Failed to ${type === "create" ? "create" : "edit"} a project. \n\n ${error}`);
         } finally {
             setSubmitting(false)
         }
