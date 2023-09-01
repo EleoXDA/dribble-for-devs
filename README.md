@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dribble for Developers (DevDribble)
+
+![Screenshot 2023-08-31 233721](https://github.com/EleoXDA/dribble-for-devs/assets/27622683/3340b983-f666-48c0-ba13-82c7fa143b6c)
+
+![Screenshot 2023-08-31 233750](https://github.com/EleoXDA/dribble-for-devs/assets/27622683/43833314-7d70-478a-8961-f9914e1ebce0)
+
+
+## Features
+
+- **Next.js 13**: Utilizing the latest features and improvements from Next.js 13.
+- **AI Integration**: Seamless integration of AI functionalities into SaaS application.
+- **Responsive Design**: A mobile-first approach for good UX no matter the screen width.
+- **Mediacontainer**: Built-in user authentication and authorization using Clerk.
+- **Database Integration**: Storing user and Payment info with integrated Database.
 
 ## Getting Started
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/EleoXDA/dribble-for-devs.git
+   ```
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+4. **Run the development server**
+   ```
+   npm run dev
+   ```
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Using the application
+1. **Log in using Google or Phone number** _(no real phone number or email is stored)_
+2. **Click on Share Work Button**
+3. **Upload an image as poster image for your Project**
+4. **Fill out the rest of the form**
+5. **Click Create button and your Project will be visible to others**
